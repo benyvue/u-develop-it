@@ -21,21 +21,21 @@ const db = mysql.createConnection(
 );
 
 // Get all candidates
-app.get('/api/candidates', (req, res) => {
-  const sql = `SELECT * FROM candidates`;
+// app.get('/api/candidates', (req, res) => {
+//   const sql = `SELECT * FROM candidates`;
 
 
-  db.query(sql, (err, rows) => {
-    if (err) {
-      res.status(500).json({ error: err.message});
-      return;
-    }
-    res.json({
-      message: 'success',
-      data: rows
-    });
-  });
-});
+//   db.query(sql, (err, rows) => {
+//     if (err) {
+//       res.status(500).json({ error: err.message});
+//       return;
+//     }
+//     res.json({
+//       message: 'success',
+//       data: rows
+//     });
+//   });
+// });
 
 
 // Get a single candidate
